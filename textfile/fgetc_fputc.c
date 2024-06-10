@@ -15,6 +15,7 @@ int main(void) {
 	FILE* dst = fopen("dst.txt", "w");
 	if (dst == NULL) {
 		perror("fopen");
+		fclose(src);
 		return -1;
 	}    
 
