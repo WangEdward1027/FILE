@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-//fgetc：一个字符一个字符地读  
+//fgetc：一个字符一个字符地读。
 //fputc: 一个字符一个字符地写
 
 int main(void) {
