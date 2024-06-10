@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
-//fgetc：一个字符一个字符地读。
-//fputc: 一个字符一个字符地写
+//fgetc：一个字符一个字符地读取 文本文件
+//fputc: 一个字符一个字符地写入 文本文件
 
 int main(void) {
 	FILE* src = fopen("src.txt", "r");
