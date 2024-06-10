@@ -21,7 +21,7 @@ int main(void) {
 
 	int c;
 	while ((c = fgetc(src)) != EOF) {
-		//fputc(c, dst);		   //实现文件复制，一个字符一个字符的复制
+		//fputc(c, dst);	   //实现文件复制，一个字符一个字符的复制
 		//fputc(tolower(c), dst);  //全文替换为小写
 		fputc(toupper(c), dst);	   //全文替换为大写
 	}
