@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-//fgets：逐行读取
-//fputs：逐行写入
+//fgets：逐行读取 文本文件
+//fputs：逐行写入 文本文件
 //复制文件并添加行号
 
 int main(void) {
