@@ -1,4 +1,5 @@
-//strcpy、strncpy、memcpy
+//1.strcpy、strncpy、memcpy
+//2.手动实现strcpy
 
 #include <string.h>
 #include <iostream>
@@ -36,10 +37,29 @@ void test3(){
     cout << endl;
 }
 
+//手动实现strcpy
+char* mystrcpy(char* dest, const char* src){
+    
+    
+    char *dest_copy = dest;  // 保留目标字符串的起始地址
+    while ((*dest++ = *src++) != '\0') {
+        // 将 src 指针所指向的字符复制到 dest 指针所指向的位置，
+        // 然后同时递增两个指针，直到遇到 '\0' 结束复制
+    }
+    return dest_copy;  // 返回目标字符串的起始地址   
+}
+
+void test4(){
+    char des[20] = {0};
+    mystrcpy(des, "Hello");
+    cout << des << endl;
+}
+
 int main()
 {
     /* test(); */
-    test2();
+    /* test2(); */
     /* test3(); */
+    test4();
     return 0;
 }
