@@ -39,7 +39,7 @@ void test3(){
 
 //手动实现strcpy
 char* mystrcpy(char* dest, const char* src){
-    char* p = dest;
+    char* p = dest;  //记录指针的初始位置
     while((*dest++ = *src++) != '\0')
         ;
     return p;
