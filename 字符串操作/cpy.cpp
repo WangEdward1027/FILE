@@ -39,19 +39,29 @@ void test3(){
 
 //手动实现strcpy
 char* mystrcpy(char* dest, const char* src){
-    
-    
-    char *dest_copy = dest;  // 保留目标字符串的起始地址
-    while ((*dest++ = *src++) != '\0') {
-        // 将 src 指针所指向的字符复制到 dest 指针所指向的位置，
-        // 然后同时递增两个指针，直到遇到 '\0' 结束复制
+    char* p = dest;
+    while((*dest++ = *src++) != '\0')
+        ;
+    return p;
+}
+
+//完整版写法
+char* Mystrcpy(char* dest, const char* src){
+    char* dest_copy = dest;
+    while(true){
+        *dest = *src;
+        if(*src == '\0') break;
+        dest++;
+        src++;
     }
-    return dest_copy;  // 返回目标字符串的起始地址   
+    return dest_copy;
 }
 
 void test4(){
     char des[20] = {0};
-    mystrcpy(des, "Hello");
+    mystrcpy(des, "Hello,World!");
+    cout << des << endl;
+    Mystrcpy(des, "Hello,Edward!");
     cout << des << endl;
 }
 
