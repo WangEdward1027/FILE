@@ -5,10 +5,11 @@
 #include <dirent.h>
 #include <error.h>
 #include <errno.h>
+#include <string.h>
 
 int main() {
     //定义并初始化路径
-    const char path[] = "./dict1";
+    const char path[] = "./dict";
 
     // 打开目录
     DIR* dir = opendir(path);
@@ -19,6 +20,10 @@ int main() {
     // 读取目录中的每一项
     struct dirent* entry;
     while((entry = readdir(dir)) != NULL){
+        //过滤 . 和 ..
+        if((strcmp(entry->d_name, ".") == 0) || (strcmp(entry->d_name, "..") == 0))
+            continue;
+        //打印文件名 或 目录名
         printf("%s\n", entry->d_name);
     }
 
