@@ -12,13 +12,13 @@ int main() {
 
     // 打开目录
     DIR* dir = opendir(path);
-    if (dir == NULL) {
+    if(dir == NULL){
     	error(1, errno, "opendir %s", path);  //使用errno来获取错误信息
     }
 
     // 读取目录中的每一项
     struct dirent* entry;
-    while ((entry = readdir(dir)) != NULL) {
+    while((entry = readdir(dir)) != NULL){
         printf("%s\n", entry->d_name);
     }
 
